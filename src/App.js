@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import HOC from './Components/HOC';
+import AddBackgroundColor from './Components/AddBackgroundColor';
+import ChangeColor from './Components/ChangeColor';
+import PureComp from './Components/PureComp';
+import NormalComp from './Components/NormalComp';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div><h1>HOC : </h1></div>
+      <AddBackgroundColor value={<HOC/>}/>
+      <ChangeColor value={<HOC/>}/>
+      <div><h1>Normal Component : </h1></div>
+      <NormalComp/>
+      <div><h1>Pure Component : </h1></div>
+      <PureComp/>
+    </>
   );
 }
 
